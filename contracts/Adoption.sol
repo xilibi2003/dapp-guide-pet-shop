@@ -1,7 +1,11 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.5.0;
 
 contract Adoption {
 
+  constructor() public {
+
+  }
+  
   address[16] public adopters;  // 保存领养者的地址
 
     // 领养宠物
@@ -13,7 +17,7 @@ contract Adoption {
   }
 
   // 返回领养者
-  function getAdopters() public view returns (address[16]) {
+  function getAdopters() public view returns (address[16] memory) {
     return adopters;
   }
 
